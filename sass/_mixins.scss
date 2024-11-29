@@ -1,0 +1,60 @@
+@use 'colors' as *;
+
+@mixin button_box($bordercol, $backcol, $pad) {
+    border: solid 2px;
+    border-color: $bordercol;
+    background-color: $backcol;
+    padding: $pad;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+@mixin button_hover ($color, $backcol) {
+    color: $color;
+    background-color: $backcol;
+}
+
+
+@mixin anchor_style($color) {
+    color: $color;
+    text-decoration: none;
+}
+
+
+@mixin rounded_image($wid, $hei) {
+    width: $wid;
+    height: $hei;
+    border-radius: 100%;
+}
+
+
+@mixin general_box($wid, $hei, $pad, $borad) {
+    width: $wid;
+    height: $hei;
+    padding: $pad;
+    border-radius: $borad;
+}
+
+@mixin flex($direction, $juscon, $alitem, $gap, $flex, $flwrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $juscon;
+    align-items: $alitem;
+    gap: $gap;
+    flex: $flex;
+    flex-wrap: $flwrap;
+}
+
+
+@mixin link_hover() {
+    color: $redBrown;
+    transition: background-color 0.5s;
+    text-shadow: 0 0 1px black, 0 0 1px black;
+}
+
+@mixin category_background ($source) {
+    background-image: url($source);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
